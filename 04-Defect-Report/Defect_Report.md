@@ -1,38 +1,64 @@
-# Defect Report – nopCommerce E-Commerce Application
+# Defect Report
 
-## 1. Defect Summary
+## Project
 
-| Metric            | Count |
-| ----------------- | ----: |
-| Confirmed Defects |     0 |
-| Critical          |     0 |
-| High              |     0 |
-| Medium            |     0 |
-| Low               |     0 |
+nopCommerce Manual Testing Project
 
-## 2. Defect Details
+## Application
 
-No confirmed defects were identified during the execution of the selected 10 representative test cases.
+nopCommerce Demo Store
 
-The executed test cases covered:
+## Defect Summary
 
-* User registration
-* Duplicate email validation
-* Email format validation
-* Mandatory field validation
-* Valid login
-* Invalid password handling
-* Blank login validation
-* Product search
-* No-result search
-* Shopping cart
+| Field        | Details                                 |
+| ------------ | --------------------------------------- |
+| Defect ID    | BUG-001                                 |
+| Test Case ID | TC-027                                  |
+| Module       | Product Details                         |
+| Title        | Product image does not respond to click |
+| Severity     | Minor                                   |
+| Priority     | Medium                                  |
+| Status       | Open                                    |
+| Environment  | Web application / Browser               |
+| Test Type    | Functional / UI                         |
+| Reported By  | QA Tester                               |
 
-## 3. Testing Note
+## Defect Description
 
-Only the selected representative test cases were executed during this test cycle. The absence of reported defects does not indicate that the application is defect-free.
+The product image on the product details page does not respond when clicked.
 
-The remaining documented test cases were not executed as part of this execution cycle.
+## Preconditions
 
-## 4. Status
+* User is on the product details page.
+* A product with a displayed product image is available.
 
-**Defect Status:** No confirmed defects identified
+## Steps to Reproduce
+
+1. Open the nopCommerce Demo Store.
+2. Search for `Apple iPhone 16 128GB`.
+3. Open the product details page.
+4. Click on the displayed product image.
+
+## Expected Result
+
+The product image should provide an appropriate response when clicked, such as opening an enlarged image, gallery, or other supported image interaction.
+
+## Actual Result
+
+Clicking the product image produces no response.
+
+## Severity Rationale
+
+**Minor:** The issue does not prevent the user from viewing product information or purchasing the product, but it affects expected image interaction/usability.
+
+## Current Status
+
+**Open** — Defect observed during manual execution and requires further review.
+
+## Execution Evidence
+
+This defect was identified while executing **TC-027 — Product Image** during the manual testing cycle.
+
+## Notes
+
+Only defects actually observed during execution are recorded in this report. No defects are claimed for test cases that have not been executed.
