@@ -1,54 +1,77 @@
-# Test Execution Report – nopCommerce E-Commerce Application
+# Test Execution Report
 
-## 1. Execution Summary
+## Project
+
+nopCommerce Manual Testing Project
+
+## Application
+
+nopCommerce Demo Store
+
+## Execution Summary
 
 | Metric                    | Result |
 | ------------------------- | -----: |
 | Total Test Cases Designed |     82 |
-| Test Cases Executed       |     10 |
-| Passed                    |     10 |
-| Failed                    |      0 |
+| Test Cases Executed       |     15 |
+| Passed                    |     14 |
+| Failed                    |      1 |
 | Blocked                   |      0 |
-| Pass Rate                 |   100% |
+| Pass Rate                 | 93.33% |
+| Confirmed Defects         |      1 |
 
-## 2. Test Environment
+## Test Environment
 
-**Application:** nopCommerce Demo Store
-**Application Type:** E-Commerce Web Application
-**Testing Type:** Manual Testing
-**Execution Status:** Completed for selected representative test cases
+* Application: nopCommerce Demo Store
+* Testing Type: Manual Testing
+* Browser: Web Browser
+* Environment: Demo/Test Environment
 
-## 3. Executed Test Cases
+## Executed Test Cases
 
-| Test Case ID | Test Description                                | Expected Result                                         | Actual Result                                                      | Status |
-| ------------ | ----------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------ | ------ |
-| TC-001       | Register with valid details                     | User should be registered successfully                  | Registration completed successfully                                | PASS   |
-| TC-003       | Register using an already registered email      | Application should prevent duplicate email registration | Existing email was not available for registration                  | PASS   |
-| TC-004       | Register using invalid email format             | Application should display email validation error       | "Please enter a valid email address." was displayed                | PASS   |
-| TC-005       | Submit registration with mandatory fields blank | Application should display mandatory-field validation   | "Last name is required." was displayed                             | PASS   |
-| TC-008       | Login with valid credentials                    | User should be logged in successfully                   | Login completed successfully                                       | PASS   |
-| TC-009       | Login with incorrect password                   | Application should reject login and display an error    | Incorrect-password error was displayed and login was rejected      | PASS   |
-| TC-011       | Login with blank credentials                    | Application should display required-field validation    | "Please enter your email" was displayed                            | PASS   |
-| TC-015       | Search for an existing product                  | Relevant product should be displayed                    | "Apple iPhone 16 128GB" was displayed                              | PASS   |
-| TC-017       | Search for a non-existing product               | Application should indicate that no products were found | "No products were found that matched your criteria." was displayed | PASS   |
-| TC-037       | Add a product to the shopping cart              | Selected product should be added to cart                | Apple iPhone 16 128GB was successfully added to the cart           | PASS   |
+| Test Case ID | Test Case                           | Result | Actual Result                                                                                     |
+| ------------ | ----------------------------------- | ------ | ------------------------------------------------------------------------------------------------- |
+| TC-001       | Valid User Registration             | PASS   | Registration completed successfully                                                               |
+| TC-003       | Duplicate Email Registration        | PASS   | Existing email was rejected                                                                       |
+| TC-004       | Invalid Email Validation            | PASS   | "Please enter a valid email address." was displayed                                               |
+| TC-005       | Blank Mandatory Registration Fields | PASS   | Mandatory field validation was displayed                                                          |
+| TC-008       | Valid Login                         | PASS   | User logged in successfully                                                                       |
+| TC-009       | Incorrect Password                  | PASS   | Incorrect-password error was displayed and login was rejected                                     |
+| TC-011       | Blank Login Fields                  | PASS   | Email validation message was displayed                                                            |
+| TC-015       | Search Existing Product             | PASS   | Apple iPhone 16 128GB was displayed                                                               |
+| TC-017       | Search Non-Existing Product         | PASS   | "No products were found that matched your criteria." was displayed                                |
+| TC-037       | Add Product to Cart                 | PASS   | Product was successfully added to cart                                                            |
+| TC-038       | Update Product Quantity             | PASS   | Quantity was successfully changed from 1 to 2                                                     |
+| TC-040       | Remove Product from Cart            | PASS   | Product was removed and cart displayed "Your Shopping Cart is empty!"                             |
+| TC-053       | Checkout Flow / Payment Validation  | PASS   | Checkout progressed through address, shipping and payment steps; invalid card number was rejected |
+| TC-026       | Product Details                     | PASS   | Product name, image, price, add-to-cart and wishlist options were displayed                       |
+| TC-027       | Product Image Interaction           | FAIL   | Clicking the product image produced no response                                                   |
 
-## 4. Test Execution Observations
+## Defect Summary
 
-* Valid registration and login workflows were successfully completed.
-* Duplicate email registration was prevented.
-* Email and mandatory-field validations were observed during negative testing.
-* Invalid login credentials were rejected with an appropriate error message.
-* Product search returned a relevant result for an existing product.
-* Search with a non-existing product returned an appropriate no-results message.
-* Product addition to the shopping cart was successfully verified.
+| Defect ID | Test Case | Description                             | Severity | Status |
+| --------- | --------- | --------------------------------------- | -------- | ------ |
+| BUG-001   | TC-027    | Product image does not respond to click | Minor    | Open   |
 
-## 5. Defect Summary
+## Execution Observations
 
-No confirmed defects were identified during the execution of the selected 10 test cases.
+* Registration and login validations behaved as expected for the executed scenarios.
+* Product search handled both existing and non-existing search terms correctly.
+* Shopping cart addition, quantity update and product removal worked as expected.
+* Checkout progressed through billing address, shipping method and payment method selection.
+* Invalid credit card information was rejected with an appropriate validation message.
+* A usability/functional issue was observed with product image interaction.
 
-## 6. Conclusion
+## Pass Rate Calculation
 
-The selected representative test cases covering registration, authentication, input validation, product search, and shopping-cart functionality were executed successfully.
+**Pass Rate = (Passed Test Cases / Executed Test Cases) × 100**
 
-All 10 executed test cases passed. The remaining test cases in the project are documented as part of the planned test suite but were not executed during this execution cycle.
+**Pass Rate = (14 / 15) × 100 = 93.33%**
+
+## Execution Status
+
+The current execution cycle is **In Progress**.
+
+A total of **15 test cases have been executed**, with **14 passed and 1 failed**. One confirmed defect has been documented separately as **BUG-001**.
+
+The remaining test cases are designed but have not yet been executed.
