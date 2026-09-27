@@ -1,14 +1,6 @@
 # Defect Report
 
-## Project
-
-nopCommerce Manual Testing Project
-
-## Application
-
-nopCommerce Demo Store
-
-## Defect Summary
+## BUG-001 — Product Image Does Not Respond to Click
 
 | Field        | Details                                 |
 | ------------ | --------------------------------------- |
@@ -19,46 +11,84 @@ nopCommerce Demo Store
 | Severity     | Minor                                   |
 | Priority     | Medium                                  |
 | Status       | Open                                    |
-| Environment  | Web application / Browser               |
-| Test Type    | Functional / UI                         |
-| Reported By  | QA Tester                               |
+| Environment  | nopCommerce Demo Store – Web Browser    |
+| Defect Type  | Functional / UI Interaction             |
 
-## Defect Description
+---
 
-The product image on the product details page does not respond when clicked.
+## Description
+
+While testing the product details page, the product image was clicked to verify its interaction behavior.
+
+The image did not provide any response after the click.
+
+---
 
 ## Preconditions
 
-* User is on the product details page.
-* A product with a displayed product image is available.
+1. User is able to access the nopCommerce demo store.
+2. Product `Apple iPhone 16 128GB` is available.
+3. Product details page is open.
+
+---
 
 ## Steps to Reproduce
 
-1. Open the nopCommerce Demo Store.
+1. Open the nopCommerce demo store.
 2. Search for `Apple iPhone 16 128GB`.
 3. Open the product details page.
-4. Click on the displayed product image.
+4. Click the displayed product image.
+
+---
 
 ## Expected Result
 
-The product image should provide an appropriate response when clicked, such as opening an enlarged image, gallery, or other supported image interaction.
+The product image should provide the interaction expected by the product design, such as opening an enlarged image or providing an available gallery/image interaction.
+
+---
 
 ## Actual Result
 
-Clicking the product image produces no response.
+Clicking the product image produced no response.
+
+---
+
+## Impact
+
+The issue does not prevent the user from viewing the product information, adding the product to the cart, or completing the checkout flow.
+
+The impact is therefore considered minor and primarily affects product-image interaction/usability.
+
+---
 
 ## Severity Rationale
 
-**Minor:** The issue does not prevent the user from viewing product information or purchasing the product, but it affects expected image interaction/usability.
+**Minor:** The issue does not block a core purchasing workflow and the product can still be purchased.
+
+## Priority Rationale
+
+**Medium:** The issue should be reviewed because it affects an interactive element on the product-details page, although it does not block the primary purchase flow.
+
+---
+
+## Test Evidence
+
+**Test Case:** TC-027 — Product Image Interaction
+
+**Execution Result:** FAIL
+
+The behavior was observed during manual execution of the test case.
+
+---
 
 ## Current Status
 
-**Open** — Defect observed during manual execution and requires further review.
+**Open**
 
-## Execution Evidence
+The defect requires review to determine whether the observed behavior is inconsistent with the intended product design.
 
-This defect was identified while executing **TC-027 — Product Image** during the manual testing cycle.
+---
 
-## Notes
+## QA Note
 
-Only defects actually observed during execution are recorded in this report. No defects are claimed for test cases that have not been executed.
+The expected behavior should ultimately be confirmed against the application's intended UI specification. If the product image is intentionally designed as a non-clickable element, the test expectation should be revised and this issue should be reclassified accordingly.
