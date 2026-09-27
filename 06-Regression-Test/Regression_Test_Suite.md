@@ -1,56 +1,95 @@
-# Regression Test Suite – nopCommerce E-Commerce Application
+# Regression Test Suite
 
 ## 1. Objective
 
-The regression test suite contains previously defined functional test cases that should be re-executed after application changes, bug fixes, or new feature releases to verify that existing functionality continues to work as expected.
+The purpose of the regression test suite is to verify that previously working functionality continues to operate correctly after changes, updates, or other testing activities.
 
-## 2. Regression Test Cases
+This suite contains selected high-value test cases from the master test suite.
 
-| Test Case ID | Regression Test                            | Expected Result                                     |
-| ------------ | ------------------------------------------ | --------------------------------------------------- |
-| TC-001       | Register a new customer with valid details | Customer should be registered successfully          |
-| TC-008       | Login with valid credentials               | Customer should be logged in successfully           |
-| TC-009       | Login with an incorrect password           | Login should be rejected with an appropriate error  |
-| TC-015       | Search for an existing product             | Relevant product should be displayed                |
-| TC-017       | Search for a non-existing product          | Appropriate no-results message should be displayed  |
-| TC-026       | Open a product details page                | Product information should be displayed correctly   |
-| TC-037       | Add a product to the shopping cart         | Product should be added successfully                |
-| TC-038       | Update product quantity in cart            | Cart quantity and total should be updated correctly |
-| TC-040       | Remove a product from cart                 | Product should be removed successfully              |
-| TC-053       | Proceed to checkout with a product in cart | Checkout process should be accessible               |
-| TC-063       | Access order history                       | Customer should be able to view order history       |
+---
 
-## 3. When to Execute Regression Testing
+## 2. Application
 
-Regression testing should be performed after:
+**Application:** nopCommerce Demo Store
 
-* Bug fixes
-* New feature implementation
-* Changes to existing functionality
-* Application configuration changes
-* Major releases or deployments
+**Testing Type:** Manual Regression Testing
 
-## 4. Regression Testing Approach
+**Environment:** Web Browser
 
-The regression suite should prioritize critical business workflows and functionality that may be affected by application changes.
+---
 
-The scope of regression testing can be expanded or reduced depending on the nature and impact of the change.
+## 3. Regression Test Cases
 
-## 5. Coverage
+| Test Case | Test Area        | Test Objective                                  | Result |
+| --------- | ---------------- | ----------------------------------------------- | ------ |
+| TC-001    | Registration     | Verify that user registration continues to work | PASS   |
+| TC-008    | Login            | Verify that valid login continues to work       | PASS   |
+| TC-009    | Login Validation | Verify incorrect-password handling              | PASS   |
+| TC-015    | Search           | Verify product search continues to work         | PASS   |
+| TC-026    | Product Details  | Verify product details remain accessible        | PASS   |
+| TC-037    | Shopping Cart    | Verify products can be added to cart            | PASS   |
+| TC-038    | Cart Quantity    | Verify cart quantity can be updated             | PASS   |
+| TC-040    | Cart Removal     | Verify products can be removed from cart        | PASS   |
+| TC-053    | Checkout         | Verify checkout flow remains accessible         | PASS   |
+| TC-057    | Order Processing | Verify an order can be successfully processed   | PASS   |
+| TC-063    | Order History    | Verify processed orders appear in order history | PASS   |
+| TC-064    | Order Details    | Verify order details remain accessible          | PASS   |
 
-The regression suite covers:
+---
 
-* Customer registration
-* Authentication
-* Input validation
-* Product search
+## 4. Representative Regression Execution
+
+A previously tested cart functionality was re-tested during the final testing cycle.
+
+### Test
+
+**Cart Quantity Update**
+
+### Initial State
+
+* Product: Apple iPhone 16 128GB
+* Quantity: 1
+
+### Action
+
+The quantity was increased from **1 to 2** and the cart was updated.
+
+### Result
+
+The cart successfully reflected the updated quantity and corresponding price.
+
+**Regression Result: PASS**
+
+---
+
+## 5. Regression Testing Approach
+
+Regression testing in this project focuses on rechecking important existing functionality after other testing activities have been performed.
+
+Selected regression areas include:
+
+* Registration
+* Login
+* Search
 * Product details
 * Shopping cart
 * Checkout
-* Order management
+* Order processing
+* Order history
+* Order details
 
-## 6. Execution Status
+---
 
-The regression suite has been designed as part of the manual testing project.
+## 6. Expected Outcome
 
-Selected test cases from the regression suite were executed during the current test execution cycle. Detailed execution results are documented in the Test Execution Report.
+Previously working functionality should continue to operate correctly without introducing new failures.
+
+The representative regression test completed successfully.
+
+---
+
+## 7. Conclusion
+
+The selected regression test cases provide repeatable coverage of critical e-commerce functionality.
+
+The representative cart regression test passed successfully, demonstrating that previously verified functionality continued to work during the testing cycle.
